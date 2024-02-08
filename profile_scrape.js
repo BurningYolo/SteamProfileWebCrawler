@@ -53,7 +53,7 @@ async function fetchCommentsData(name_or_id)
 
 
 function extractText(element) {
-    return element.text().trim();
+    return element.text().replace(/\s{2,}/g, ' ').trim();
 }
 
 const name_or_id = config.name_or_id;
